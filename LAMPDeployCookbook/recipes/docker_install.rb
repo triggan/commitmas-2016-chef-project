@@ -12,3 +12,7 @@ end
 docker_service 'default' do
   action [:create, :start]
 end
+
+docker_image 'hello-world' do
+  action :pull_if_missing
+end
