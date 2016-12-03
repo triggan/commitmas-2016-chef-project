@@ -25,6 +25,7 @@ git fetch upstream
 This last command is the one that grabs everything and puts it into your working branch. If you want it to grab the main repo and put it into another branch, just switch to that branch first.
 
 3. Updating your fork from original repo to keep up with their changes:
+
 <pre><code data-trim class="bash">
 git pull upstream master
 </code></pre>
@@ -39,4 +40,4 @@ git push -u origin master
 
 This one is important, this will push all the changes from your local repo up to your GitHub repo master branch. If you don't run this, all the changes from the main Chef repo will just sit on your computer and not go anywhere.
 
-Ok, I hope that helps out. Please update this document for clarity if I confused you. Let me know if you have any questions. 
+Ok, I hope that helps out. Please update this document for clarity if I confused you. Let me know if you have any questions.
