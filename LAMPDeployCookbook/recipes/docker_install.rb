@@ -9,6 +9,10 @@ docker_service 'default' do
   action [:create, :start]
 end
 
-docker_image 'hello-world' do
+docker_image 'mysql' do
+  action :pull_if_missing
+end
+
+docker_image 'httpd' do
   action :pull_if_missing
 end
