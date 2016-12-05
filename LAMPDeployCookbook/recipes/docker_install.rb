@@ -4,6 +4,13 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
+directory '/tmp/htdocs' do
+  action :create
+end
+
+template '/tmp/htdocs/index.html' do
+  source 'index.html.erb'
+end
 
 docker_service 'default' do
   action [:create, :start]
@@ -25,6 +32,6 @@ docker_container 'my_httpd' do
   repo 'httpd'
   tag 'latest'
   port '80:80'
-  volumes [ '/home/seanluce/httpd:/usr/local/apache2/htdocs/' ]
+  volumes [ '/tmp/htdocs:/usr/local/apache2/htdocs/' ]
 end
 
