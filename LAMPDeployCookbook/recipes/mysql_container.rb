@@ -1,10 +1,10 @@
 #
 # Cookbook Name:: LAMPDeployCookbook
-# Recipe:: docker_install
+# Recipe:: mysql_container
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 
-docker_service 'default' do
-  action [:create, :start]
+docker_image 'mysql' do
+  action :pull_if_missing
 end

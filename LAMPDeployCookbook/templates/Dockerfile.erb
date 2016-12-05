@@ -1,0 +1,5 @@
+dockerfile FROM ruby:latest MAINTAINER Name jesse.c.anderson@icloud.com
+
+dockerfile RUN \ mkdir -p /home/jekyll && \ groupadd -rg 1000 jekyll && \ useradd -rg jekyll -u 1000 -d /home/jekyll jekyll && \ chown jekyll:jekyll /home/jekyll && \ gem install jekyl
+
+dockerfile VOLUME /home/jekyll
