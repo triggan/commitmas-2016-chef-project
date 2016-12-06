@@ -11,6 +11,8 @@ apt_update 'Update the apt cache daily' do
   action :periodic
 end
 
+
+include_recipe '::git_config'
 include_recipe '::docker_install'
 include_recipe '::apache_container'
 include_recipe '::jekyllDeploy'
