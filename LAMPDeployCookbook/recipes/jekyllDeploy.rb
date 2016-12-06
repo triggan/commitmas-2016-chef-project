@@ -12,9 +12,9 @@ docker_image 'jekyll/jekyll' do
   #notifies :redeploy, 'docker_container[my_jekyll]'
 end
 
-# docker_container 'my_jekyll' do
-#   repo 'jekyll'
-#   tag 'latest'
-#   port '8080:8080'
-#   volumes [ '/tmp/htdocs:/usr/local/apache2/htdocs/' ]
-# end
+ docker_container 'my_jekyll' do
+   repo 'jekyll'
+   tag 'latest'
+   port '8080:8080'
+   volumes [ '/tmp/jekyll' ]
+ end
