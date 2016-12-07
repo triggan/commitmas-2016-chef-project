@@ -15,5 +15,6 @@ end
 include_recipe '::git_config'
 include_recipe '::docker_install'
 include_recipe '::apache_container'
+include_recipe '::php_container'
 include_recipe '::jekyllDeploy'
 include_recipe '::mysql_container'
