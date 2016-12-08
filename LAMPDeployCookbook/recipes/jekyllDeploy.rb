@@ -9,7 +9,7 @@
 docker_image 'jekyll/jekyll' do
   tag 'latest'
   action :pull_if_missing
-  #notifies :redeploy, 'docker_container[my_jekyll]'
+  notifies :redeploy, 'docker_container[my_jekyll]'
 end
 
  docker_container 'my_jekyll' do
