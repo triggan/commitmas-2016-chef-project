@@ -15,6 +15,6 @@ end
 docker_container 'my_php' do
   repo 'php'
   tag '7.0-apache'
-  port '80:80'
+  port '8080:8080'
   volumes [ '/tmp/htdocs:/var/www/html' ]
 end
